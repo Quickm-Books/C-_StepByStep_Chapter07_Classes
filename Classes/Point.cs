@@ -11,11 +11,13 @@ namespace Classes
     class Point
     {
         private int x, y;
+        private static int objectCount = 0;
 
         public Point()
         {
             this.x = -1;
             this.y = -1;
+            objectCount++;
 
             Console.WriteLine("Default Constructor called");
         }
@@ -24,6 +26,7 @@ namespace Classes
         {
             this.x = x;
             this.y = y;
+            objectCount++;
 
             Console.WriteLine($"x:{x}, y:{y}");
         }
@@ -45,5 +48,7 @@ namespace Classes
             x = this.x;
             y = this.y;
         }
+
+        public static int ObjectCount() => objectCount;
     }
 }

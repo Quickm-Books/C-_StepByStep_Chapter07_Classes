@@ -19,6 +19,8 @@ namespace Classes
 
             (int xVal, int yVal) = origin;
             Console.WriteLine($"origin: x:{xVal}, y:{yVal}");
+
+            Console.WriteLine($"Point object count: {Point.ObjectCount()}");
         }
 
         static void Main(string[] args)
