@@ -10,7 +10,15 @@ namespace Classes
     {
         static void doWork()
         {
-            // TODO:
+            Point origin = new Point();
+            Point bottomRight = new Point(1366, 768);
+
+            double distance = origin.distanceTo(bottomRight);
+
+            Console.WriteLine($"Distance: {distance}");
+
+            (int xVal, int yVal) = origin;
+            Console.WriteLine($"origin: x:{xVal}, y:{yVal}");
         }
 
         static void Main(string[] args)
@@ -18,6 +26,7 @@ namespace Classes
             try
             {
                 doWork();
+                //Console.ReadLine();
             }
             catch (Exception ex)
             {
